@@ -1,0 +1,38 @@
+uuid: 4522af1a-f049-436f-a8ca-82b43b4db369
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_background
+    - node.type.map_page
+  module:
+    - image
+id: node.map_page.field_banner_background
+field_name: field_banner_background
+entity_type: node
+bundle: map_page
+label: 'Banner Background'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

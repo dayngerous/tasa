@@ -1,0 +1,21 @@
+uuid: 540f1304-d757-4cde-a8cb-61691bca35c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fish_main_content
+    - node.type.fauna
+  module:
+    - text
+id: node.fauna.field_fish_main_content
+field_name: field_fish_main_content
+entity_type: node
+bundle: fauna
+label: 'Fish Main Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

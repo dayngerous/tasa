@@ -1,0 +1,21 @@
+uuid: 80e810e8-5ca1-4930-a63c-d0b03e8126e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reptile_content
+    - node.type.fauna
+  module:
+    - text
+id: node.fauna.field_reptile_content
+field_name: field_reptile_content
+entity_type: node
+bundle: fauna
+label: 'Reptile Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

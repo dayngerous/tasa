@@ -1,0 +1,20 @@
+uuid: 0318c674-b28e-4226-8acc-46a1c8a1d771
+langcode: en
+status: true
+dependencies:
+  theme:
+    - turneffe
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: turneffe_local_actions
+theme: turneffe
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

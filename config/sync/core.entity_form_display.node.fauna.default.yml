@@ -1,0 +1,370 @@
+uuid: 9f48bf81-a8ef-4e73-a5de-2d554b13df7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.node.fauna.body
+    - field.field.node.fauna.field_1st_related_page
+    - field.field.node.fauna.field_2nd_related_page
+    - field.field.node.fauna.field_3rd_related_page
+    - field.field.node.fauna.field_alternative_banner_sub_tit
+    - field.field.node.fauna.field_alternative_banner_title
+    - field.field.node.fauna.field_banner_background
+    - field.field.node.fauna.field_birds_content
+    - field.field.node.fauna.field_birds_image
+    - field.field.node.fauna.field_fish_main_content
+    - field.field.node.fauna.field_fish_secondary_content
+    - field.field.node.fauna.field_fish_slider_image
+    - field.field.node.fauna.field_introduction_content
+    - field.field.node.fauna.field_mammals_content
+    - field.field.node.fauna.field_mammals_image
+    - field.field.node.fauna.field_marine_mammals_content
+    - field.field.node.fauna.field_marine_mammals_image
+    - field.field.node.fauna.field_reptile_content
+    - field.field.node.fauna.field_reptile_image
+    - node.type.fauna
+  module:
+    - entity_browser
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_mammals:
+      children:
+        - field_mammals_content
+        - field_mammals_image
+        - field_marine_mammals_content
+        - field_marine_mammals_image
+      label: Mammals
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+    group_reptiles:
+      children:
+        - field_reptile_content
+        - field_reptile_image
+      label: Reptiles
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+    group_fish:
+      children:
+        - field_fish_main_content
+        - field_fish_slider_image
+        - field_fish_secondary_content
+      label: Fish
+      region: content
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+    group_birds:
+      children:
+        - field_birds_content
+        - field_birds_image
+      label: Birds
+      region: content
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+    group_page_banner:
+      children:
+        - field_alternative_banner_title
+        - field_alternative_banner_sub_tit
+        - field_introduction_content
+        - field_banner_background
+      label: 'Page Banner'
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+    group_related_pages:
+      children:
+        - field_1st_related_page
+        - field_2nd_related_page
+        - field_3rd_related_page
+      label: 'Related Pages'
+      region: content
+      parent_name: ''
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        id: ''
+        description: ''
+        required_fields: true
+id: node.fauna.default
+targetEntityType: node
+bundle: fauna
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 6
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_1st_related_page:
+    type: entity_reference_autocomplete
+    weight: 39
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_2nd_related_page:
+    type: entity_reference_autocomplete
+    weight: 40
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_3rd_related_page:
+    type: entity_reference_autocomplete
+    weight: 41
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_alternative_banner_sub_tit:
+    type: string_textfield
+    weight: 36
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_alternative_banner_title:
+    type: string_textfield
+    weight: 35
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_banner_background:
+    type: entity_browser_file
+    weight: 38
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_edit
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_birds_content:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_birds_image:
+    type: entity_browser_file
+    weight: 33
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_fish_main_content:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_fish_secondary_content:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_fish_slider_image:
+    type: entity_browser_file
+    weight: 30
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_introduction_content:
+    type: text_textarea
+    weight: 37
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_mammals_content:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_mammals_image:
+    type: entity_browser_file
+    weight: 7
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_marine_mammals_content:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_marine_mammals_image:
+    type: entity_browser_file
+    weight: 9
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_reptile_content:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_reptile_image:
+    type: entity_browser_file
+    weight: 27
+    region: content
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_edit: true
+      field_widget_remove: true
+      open: false
+      selection_mode: selection_append
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 121
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

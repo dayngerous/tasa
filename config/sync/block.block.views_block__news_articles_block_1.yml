@@ -1,0 +1,30 @@
+uuid: 28d89747-54f5-454a-bf3f-46135cecfd66
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_articles
+  module:
+    - system
+    - views
+  theme:
+    - turneffe
+id: views_block__news_articles_block_1
+theme: turneffe
+region: content
+weight: 4
+provider: null
+plugin: 'views_block:news_articles-block_1'
+settings:
+  id: 'views_block:news_articles-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /news

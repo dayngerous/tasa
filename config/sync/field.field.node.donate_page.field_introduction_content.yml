@@ -1,0 +1,21 @@
+uuid: 3db6aae9-99e2-420a-8c2c-0d21cdc0c548
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction_content
+    - node.type.donate_page
+  module:
+    - text
+id: node.donate_page.field_introduction_content
+field_name: field_introduction_content
+entity_type: node
+bundle: donate_page
+label: 'Introduction Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

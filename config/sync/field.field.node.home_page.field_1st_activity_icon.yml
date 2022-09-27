@@ -1,0 +1,38 @@
+uuid: eac5d199-997a-44db-8c78-e47144ad40ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1st_activity_icon
+    - node.type.home_page
+  module:
+    - image
+id: node.home_page.field_1st_activity_icon
+field_name: field_1st_activity_icon
+entity_type: node
+bundle: home_page
+label: '1st Activity Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

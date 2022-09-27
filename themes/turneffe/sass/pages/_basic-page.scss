@@ -1,0 +1,141 @@
+.container.content-container .field--name-body {
+    ul {
+        padding: 0 5%;
+        li {
+            margin: 0 0 8px;
+        }
+    }
+}
+
+.page-node-22 .container.content-container .node__content .field--name-body {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+}
+
+.view-staff,
+.view-ecosystems,
+.content-slide {
+    .view-content .views-row article,
+    .slide-row {
+        padding-bottom: 55px;
+    }
+    .view-content .views-row:not(:first-child) article {
+        padding-left: 5.5%;
+    }
+    .view-content .views-row:not(:first-child) article.large {
+        padding-left: 0;
+    }
+    .slide-row:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.views-row,
+.slide-row {
+    font-size: 0;
+    .view-image,
+    .view-text {
+        display: inline-block;
+        vertical-align: top;
+        font-size: $base-font-size;
+    }
+    .view-text {
+        padding-left: 2.5%;
+        width: calc(100% - 147px);
+        h2,
+        h3 {
+            padding: 0;
+            margin: 0;
+        }
+        h3 {
+            padding-top: 10px;
+            font-size: 1.059em;
+        }
+        p {
+            font-size: 0.941em;
+        }
+        p:first-of-type {
+            margin-top: 20px;
+        }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    .view-image {
+        width: 147px;
+        .second-image {
+            padding-top: 8%;
+        }
+    }
+    .view-image.larger {
+        width: 415px;
+    }
+    .view-text.larger {
+        width: calc(100% - 415px);
+    }
+}
+
+.views-row article.large,
+.slide-row {
+    .view-image {
+        width: 375px
+    }
+    .view-text {
+        width: calc(100% - 375px);
+    }
+}
+
+.views-row article.small {
+    .view-image {
+        width: 307px
+    }
+    .view-text {
+        width: calc(100% - 307px);
+    }
+}
+
+.view-text.full,
+.view-image.full {
+    width: 100%;
+}
+
+.view-text.full {
+    padding: 0 0 40px;
+}
+
+.field--type-entity-reference {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 40px;
+    a {
+        display: inline-block;
+        font-size: 0.824em;
+        margin-right: 15%;
+        min-width: 235px;
+        padding: 1.5em;
+        text-align: center;
+        color: $white;
+        font-family: $rubik;
+        font-weight: 400;
+    }
+    a:hover {
+        color: $white;
+        background-color: $orange;
+    }
+}
+
+.field--name-field-1st-related-page a {
+    background-color: $blue;
+}
+
+.field--name-field-2nd-related-page a {
+    background-color: $green;
+}
+
+.field--name-field-3rd-related-page a {
+    background-color: $altdarkBlue;
+}

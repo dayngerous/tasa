@@ -1,0 +1,66 @@
+uuid: 8124bbd4-f086-45a1-9f56-967f70d59811
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fauna.body
+    - field.field.node.fauna.field_1st_related_page
+    - field.field.node.fauna.field_2nd_related_page
+    - field.field.node.fauna.field_3rd_related_page
+    - field.field.node.fauna.field_alternative_banner_sub_tit
+    - field.field.node.fauna.field_alternative_banner_title
+    - field.field.node.fauna.field_banner_background
+    - field.field.node.fauna.field_birds_content
+    - field.field.node.fauna.field_birds_image
+    - field.field.node.fauna.field_fish_main_content
+    - field.field.node.fauna.field_fish_secondary_content
+    - field.field.node.fauna.field_fish_slider_image
+    - field.field.node.fauna.field_introduction_content
+    - field.field.node.fauna.field_mammals_content
+    - field.field.node.fauna.field_mammals_image
+    - field.field.node.fauna.field_marine_mammals_content
+    - field.field.node.fauna.field_marine_mammals_image
+    - field.field.node.fauna.field_reptile_content
+    - field.field.node.fauna.field_reptile_image
+    - node.type.fauna
+  module:
+    - text
+    - user
+id: node.fauna.teaser
+targetEntityType: node
+bundle: fauna
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_1st_related_page: true
+  field_2nd_related_page: true
+  field_3rd_related_page: true
+  field_alternative_banner_sub_tit: true
+  field_alternative_banner_title: true
+  field_banner_background: true
+  field_birds_content: true
+  field_birds_image: true
+  field_fish_main_content: true
+  field_fish_secondary_content: true
+  field_fish_slider_image: true
+  field_introduction_content: true
+  field_mammals_content: true
+  field_mammals_image: true
+  field_marine_mammals_content: true
+  field_marine_mammals_image: true
+  field_reptile_content: true
+  field_reptile_image: true

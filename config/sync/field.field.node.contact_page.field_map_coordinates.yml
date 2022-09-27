@@ -1,0 +1,19 @@
+uuid: 522531f7-ab4b-4da4-9875-639a85c805d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map_coordinates
+    - node.type.contact_page
+id: node.contact_page.field_map_coordinates
+field_name: field_map_coordinates
+entity_type: node
+bundle: contact_page
+label: 'Map Coordinates'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

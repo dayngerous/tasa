@@ -1,0 +1,23 @@
+uuid: 5317b0b5-ae36-4dc2-a026-6bf95ace2534
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fauna
+  module:
+    - text
+id: node.fauna.body
+field_name: body
+entity_type: node
+bundle: fauna
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

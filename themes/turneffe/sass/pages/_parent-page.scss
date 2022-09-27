@@ -1,0 +1,88 @@
+.view-who-we-are-pages {
+    max-width: 1000px;
+    margin: 0 auto;
+    .views-row {
+        opacity: 0;
+        padding-bottom: 40px;
+        font-size: $base_font_size;
+        position: relative;
+        .views-side {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 40px;
+            width: 7.5%;
+            z-index: 1;
+            -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05);
+        }
+        article {
+            position: relative;
+            z-index: 2;
+            margin-left: 7.5%;
+            padding: 18px 30px 22px;
+            -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.34);
+            -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.34);
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.34);
+            font-size: 0.941em;
+            h2 {
+                display: inline-block;
+                padding: 0 0 10px;
+                margin: 0 0 15px;
+                width: 100%;
+                border-bottom: 1px solid $black;
+                font-size: 1.059em;
+                a {
+                    color: $black;
+                }
+                a:hover {
+                    color: $orange;
+                }
+            }
+            .node__links {
+                margin: 10px 0 0;
+                width: 100%;
+                .links {
+                    display: block;
+                    margin: 0;
+                    text-align: right;
+                    width: 100%;
+                    li {
+                        background-image: url(../images/link-icon.png);
+                        background-position: 0 1px;
+                        background-repeat: no-repeat;
+                        background-size: 18px 18px;
+                        padding-left: 25px;
+                        font-size: 0.824em;
+                        a {
+                            color: $black;
+                            font-weight: 700;
+                        }
+                        a:hover {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .views-row:nth-child(odd) {
+        margin: 0 200px 0 -200px;
+    }
+    .views-row:nth-child(even) {
+        margin: 0 -200px 0 200px;
+    }
+    .views-row:nth-child(4n+1) .views-side {
+        background-image: url(../images/sider1.jpg);
+    }
+    .views-row:nth-child(4n+2) .views-side {
+        background-image: url(../images/sider2.jpg);
+    }
+    .views-row:nth-child(4n+3) .views-side {
+        background-image: url(../images/sider3.jpg);
+    }
+    .views-row:nth-child(4n+4) .views-side {
+        background-image: url(../images/sider4.jpg);
+    }
+}

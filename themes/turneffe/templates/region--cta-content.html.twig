@@ -1,0 +1,77 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+
+<div class="click-throughs">
+  <div class="click-through text-center text-body cover-bg who-hide phab-full" style="background-image: url({{ base_path ~ directory }}/images/clickthrough1.jpg)">
+    <a href="{{ base_path }}who-we-are/">
+    <div class="overlay"></div>
+    <div class="overlay-text">
+      <div class="height-table">
+        <div class="height-cell">
+          <h2>Who we are</h2>
+          <div class="click-text">
+            Find out about our staff and board members
+          </div>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+  <div class="click-through text-center text-body cover-bg what-hide phab-full" style="background-image: url({{ base_path ~ directory }}/images/clickthrough2.jpg)">
+    <a href="{{ base_path }}tasa-programs/">
+    <div class="overlay"></div>
+    <div class="overlay-text">
+      <div class="height-table">
+        <div class="height-cell">
+          <h2>TASA Programs</h2>
+          <div class="click-text">
+            Find out how we protect the Turneffe Atoll
+          </div>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+  <div class="click-through text-center text-body cover-bg why-hide phab-full" style="background-image: url({{ base_path ~ directory }}/images/clickthrough3.jpg)">
+    <a href="{{ base_path }}turneffe-atoll/why-turneffe-matterss/">
+    <div class="overlay"></div>
+    <div class="overlay-text">
+      <div class="height-table">
+        <div class="height-cell">
+          <h2>Why Turneffes matters</h2>
+          <div class="click-text">
+            Find out why the Turneffe Atoll is such a special place
+          </div>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+</div>
+{% if content %}
+  <div class="region region-cta-content lgrey-bg">
+    <div class="container content-container">
+        <div class="layout-content">
+          {{ content }}
+        </div>
+    </div>{# /.layout-container #}
+  </div>
+{% endif %}

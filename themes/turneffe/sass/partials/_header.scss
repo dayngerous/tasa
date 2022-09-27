@@ -1,0 +1,107 @@
+header {
+  padding           : 15px 0 !important;
+  position          : fixed;
+  top               : 0;
+  width             : 100%;
+  z-index           : 401;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition        : all 0.4s ease-in-out 0s;
+  background        : $white;
+  border-bottom     : 1px solid $light-grey;
+}
+
+.path-frontpage header {
+  border-bottom   : none;
+  background-color: transparent;
+
+  .menu--main.navigation .menu-item ul.menu {
+    background-color: transaprent;
+
+    li.menu-item a {
+      color: $white;
+    }
+  }
+}
+
+.path-frontpage header.scrolled .menu--main.navigation .menu-item ul.menu {
+  background-color: $white;
+
+  li.menu-item a {
+    color: $black;
+  }
+
+  li.menu-item a:hover,
+  li.menu-item--active-trail a {
+    color: $white;
+  }
+}
+
+header.active,
+header.scrolled {
+  background: $white;
+}
+
+.toolbar-horizontal header,
+.toolbar-vertical header {
+  top: 39px;
+}
+
+.toolbar-tray-open.toolbar-horizontal header {
+  top: 80px;
+}
+
+.region-header div.block-system-branding-block {
+  display       : inline-block;
+  max-width     : 240px;
+  vertical-align: middle;
+  font-size     : 0;
+  line-height   : 1;
+
+  .default-logo {
+    opacity           : 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    transition        : all 0.4s ease-in-out 0s;
+
+    img {
+      max-width: 240px;
+    }
+  }
+
+  .scolled-logo {
+    opacity           : 1;
+    position          : absolute;
+    top               : auto;
+    left              : auto;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    transition        : all 0.4s ease-in-out 0s;
+
+    img {
+      max-width: 240px;
+    }
+  }
+}
+
+.path-frontpage .region-header div.block-system-branding-block {
+  .default-logo {
+    opacity: 1;
+  }
+
+  .scolled-logo {
+    opacity: 0;
+  }
+}
+
+header.active .region-header div.block-system-branding-block,
+header.scrolled .region-header div.block-system-branding-block {
+  .scolled-logo {
+    opacity: 1;
+  }
+
+  .default-logo {
+    opacity: 0;
+  }
+}
+
+body.path-frontpage.toolbar-tray-open {
+  padding-top: 0 !important;
+}

@@ -1,0 +1,4 @@
+{% set map = file_url(node.field_map_overlay.entity.fileuri) %}
+<div class="map-overlay cover-bg" style="background-image: url({{ base_path ~ directory }}/images/dummy-map.jpg)">
+    <img src="{{ map }}" alt="">
+</div>

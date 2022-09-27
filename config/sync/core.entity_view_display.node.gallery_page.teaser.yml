@@ -1,0 +1,44 @@
+uuid: 10cf0988-d1ac-404b-a519-6beda0144870
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.gallery_page.body
+    - field.field.node.gallery_page.field_alternative_banner_sub_tit
+    - field.field.node.gallery_page.field_alternative_banner_title
+    - field.field.node.gallery_page.field_banner_background
+    - field.field.node.gallery_page.field_image_gallery
+    - field.field.node.gallery_page.field_intro_content
+    - field.field.node.gallery_page.field_introduction_content
+    - field.field.node.gallery_page.field_thumb
+    - node.type.gallery_page
+  module:
+    - text
+    - user
+id: node.gallery_page.teaser
+targetEntityType: node
+bundle: gallery_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_alternative_banner_sub_tit: true
+  field_alternative_banner_title: true
+  field_banner_background: true
+  field_image_gallery: true
+  field_intro_content: true
+  field_introduction_content: true
+  field_thumb: true

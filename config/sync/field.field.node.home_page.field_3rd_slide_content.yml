@@ -1,0 +1,21 @@
+uuid: e1979422-40a4-4e58-bb3c-46fc5d80a61d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3rd_slide_content
+    - node.type.home_page
+  module:
+    - text
+id: node.home_page.field_3rd_slide_content
+field_name: field_3rd_slide_content
+entity_type: node
+bundle: home_page
+label: '3rd Slide Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

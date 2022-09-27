@@ -1,0 +1,18 @@
+uuid: 9e777a8e-fa53-4a6e-82ae-d3206b083b60
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Fauna Page'
+type: fauna
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

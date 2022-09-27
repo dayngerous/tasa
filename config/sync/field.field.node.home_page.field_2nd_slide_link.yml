@@ -1,0 +1,19 @@
+uuid: 094f0816-e24a-4340-ab17-4fd4273ac8fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2nd_slide_link
+    - node.type.home_page
+id: node.home_page.field_2nd_slide_link
+field_name: field_2nd_slide_link
+entity_type: node
+bundle: home_page
+label: '2nd Slide Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

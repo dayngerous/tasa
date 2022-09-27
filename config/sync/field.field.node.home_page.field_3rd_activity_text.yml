@@ -1,0 +1,19 @@
+uuid: 686263b4-2d6b-40c0-9af8-ca4b81481f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3rd_activity_text
+    - node.type.home_page
+id: node.home_page.field_3rd_activity_text
+field_name: field_3rd_activity_text
+entity_type: node
+bundle: home_page
+label: '3rd Activity Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

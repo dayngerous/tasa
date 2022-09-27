@@ -1,0 +1,30 @@
+uuid: 7b8e61f1-7859-44ee-a905-8d0f7e68ef4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.fisheries_management_list
+  module:
+    - system
+    - views
+  theme:
+    - turneffe
+id: views_block__fisheries_management_list_block_1
+theme: turneffe
+region: content
+weight: 7
+provider: null
+plugin: 'views_block:fisheries_management_list-block_1'
+settings:
+  id: 'views_block:fisheries_management_list-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /what-we-do/fisheries-management

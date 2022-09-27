@@ -1,0 +1,62 @@
+{% set alt_title = node.field_alternative_banner_title.value %}
+{% set alt_subtitle = node.field_alternative_banner_sub_tit.value %}
+{% set bannerintro = node.field_introduction_content.value %}
+{% set bannerbg = file_url(node.field_banner_background.entity.uri.value) %}
+{% set intro = node.field_intro_content.value %}
+<header role="banner">
+  <div class="container">
+    <div class="container-frame wide">
+      {{ page.header }}
+    </div>
+  </div>
+</header>
+{% if bannerbg and bannerbg != base_path %}
+<div class="banner container cover-bg" style="background-image:url({{ bannerbg }})">
+{% else %}
+<div class="banner container cover-bg" style="background-image:url({{ base_path ~ directory }}/images/banner-default.jpg)">
+{% endif %}
+  <div class="container-frame">
+    <div class="banner-content">
+      <div class="banner-title">
+        {% if alt_subtitle|length %}
+        <h2 class="subbannertitle">{{ alt_subtitle|raw }}</h2>
+        {% endif %}
+        {% if alt_title|length %}
+        <h1 class="mainbannertitle">{{ alt_title|raw }}</h1>
+        {% else %}
+        <h1 class="mainbannertitle">{{ node.label }}</h1>
+        {% endif %}
+      </div>
+      {% if bannerintro|length %}
+      <div class="banner-text">
+        {{ bannerintro|raw }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+{% if intro is not empty %}
+<div class="container lgrey-bg">
+  <div class="container-frame page-intro">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ intro|raw }}
+  </div>
+</div>
+{% endif %}
+<div class="container page-content">
+  <main role="main">
+    <div class="container-frame narrow layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+  </main>
+</div>{# /.layout-container #}
+
+{{ page.cta_content }}
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %}
+

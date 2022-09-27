@@ -1,0 +1,21 @@
+uuid: 69d66737-0124-4454-b6a2-ada6c5a79f1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fish_secondary_content
+    - node.type.fauna
+  module:
+    - text
+id: node.fauna.field_fish_secondary_content
+field_name: field_fish_secondary_content
+entity_type: node
+bundle: fauna
+label: 'Fish Secondary Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+uuid: 0617d524-72de-487c-8cc6-79d578017460
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+  module:
+    - contact_block
+    - system
+  theme:
+    - turneffe
+id: contactblock
+theme: turneffe
+region: content
+weight: -2
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact block'
+  label_display: visible
+  provider: contact_block
+  contact_form: personal
+  form_display: default
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /contact-us/

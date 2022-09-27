@@ -1,0 +1,23 @@
+uuid: 4286cfcc-3fa8-46e0-877c-ab510f0323c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_ecosystem
+    - node.type.ecosystems
+id: node.ecosystems.field_featured_ecosystem
+field_name: field_featured_ecosystem
+entity_type: node
+bundle: ecosystems
+label: 'Large Image'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

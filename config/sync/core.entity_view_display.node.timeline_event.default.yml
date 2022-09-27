@@ -1,0 +1,28 @@
+uuid: d5ef969e-e9b3-4f71-87aa-41e52bf4791e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timeline_event.body
+    - node.type.timeline_event
+  module:
+    - text
+    - user
+id: node.timeline_event.default
+targetEntityType: node
+bundle: timeline_event
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

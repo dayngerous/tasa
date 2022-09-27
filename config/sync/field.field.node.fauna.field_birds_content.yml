@@ -1,0 +1,21 @@
+uuid: e4bb8590-b93d-4a04-b115-29e091388bc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_birds_content
+    - node.type.fauna
+  module:
+    - text
+id: node.fauna.field_birds_content
+field_name: field_birds_content
+entity_type: node
+bundle: fauna
+label: 'Birds Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

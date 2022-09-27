@@ -1,0 +1,23 @@
+uuid: c39c1d3d-a3a7-4c17-b4c4-e4e093bf280b
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - turneffe
+id: sitebranding
+theme: turneffe
+region: footer
+weight: -13
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

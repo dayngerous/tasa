@@ -1,0 +1,46 @@
+uuid: 3e7a09b7-cd55-4c98-b641-0674312b8cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.parent_page.body
+    - field.field.node.parent_page.field_1st_child_page
+    - field.field.node.parent_page.field_2nd_child_page
+    - field.field.node.parent_page.field_3rd_child_page
+    - field.field.node.parent_page.field_4th_child_page
+    - field.field.node.parent_page.field_alternative_banner_sub_tit
+    - field.field.node.parent_page.field_alternative_banner_title
+    - field.field.node.parent_page.field_banner_background
+    - field.field.node.parent_page.field_introduction_content
+    - node.type.parent_page
+  module:
+    - text
+    - user
+id: node.parent_page.teaser
+targetEntityType: node
+bundle: parent_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_1st_child_page: true
+  field_2nd_child_page: true
+  field_3rd_child_page: true
+  field_4th_child_page: true
+  field_alternative_banner_sub_tit: true
+  field_alternative_banner_title: true
+  field_banner_background: true
+  field_introduction_content: true

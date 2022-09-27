@@ -1,0 +1,60 @@
+uuid: af48b7b7-f9a0-45dd-b57c-cdbb9d41b28a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ecosystems.body
+    - field.field.node.ecosystems.field_featured_ecosystem
+    - field.field.node.ecosystems.field_main_image
+    - field.field.node.ecosystems.field_secondary_image
+    - node.type.ecosystems
+  module:
+    - image
+    - text
+    - user
+id: node.ecosystems.default
+targetEntityType: node
+bundle: ecosystems
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_featured_ecosystem:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_main_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_secondary_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

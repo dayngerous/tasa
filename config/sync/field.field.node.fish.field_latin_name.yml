@@ -1,0 +1,19 @@
+uuid: 591cff2f-c7a7-4c71-b5b1-62613f136e73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latin_name
+    - node.type.fish
+id: node.fish.field_latin_name
+field_name: field_latin_name
+entity_type: node
+bundle: fish
+label: 'Scientific Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: cf7ffd85-c9c3-43ad-92c7-38121ed44e27
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_2nd_slide_header
+field_name: field_2nd_slide_header
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

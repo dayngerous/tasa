@@ -1,0 +1,32 @@
+uuid: 2dcffab0-0cfd-45fd-a723-8e47e07f38e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stakeholders.body
+    - field.field.node.stakeholders.field_stakeholder_image
+    - node.type.stakeholders
+  module:
+    - text
+    - user
+id: node.stakeholders.teaser
+targetEntityType: node
+bundle: stakeholders
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_stakeholder_image: true

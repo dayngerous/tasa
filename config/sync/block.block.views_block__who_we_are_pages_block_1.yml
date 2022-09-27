@@ -1,0 +1,30 @@
+uuid: 5203b7a0-bbc6-4045-8769-34e46ca98cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.who_we_are_pages
+  module:
+    - system
+    - views
+  theme:
+    - turneffe
+id: views_block__who_we_are_pages_block_1
+theme: turneffe
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:who_we_are_pages-block_1'
+settings:
+  id: 'views_block:who_we_are_pages-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '10'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /who-we-are

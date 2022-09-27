@@ -1,0 +1,18 @@
+name: Turneffe
+description: Drupal 8 Theme for Turneffe Island
+type: theme
+core_version_requirement: ^8 || ^9
+screenshot: screenshot.jpeg
+
+base theme: classy
+
+libraries:
+  - turneffe/bxslider
+  - turneffe/global-css
+  - turneffe/global-js
+  - turneffe/throttle
+regions:
+  header: 'Header'
+  content: 'Content'
+  cta_content: 'Call to actions'
+  footer: 'Footer'

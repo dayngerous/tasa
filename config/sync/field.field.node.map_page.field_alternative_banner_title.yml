@@ -1,0 +1,19 @@
+uuid: e1748564-cb62-420f-b35c-3f9a68a03ed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_banner_title
+    - node.type.map_page
+id: node.map_page.field_alternative_banner_title
+field_name: field_alternative_banner_title
+entity_type: node
+bundle: map_page
+label: 'Alternative Banner Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

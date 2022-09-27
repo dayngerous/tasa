@@ -1,0 +1,19 @@
+uuid: 18e02d0a-e74b-4a85-8428-9a14dc22c066
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - footer
+      - main
+    parent: 'main:'
+name: 'Home Page'
+type: home_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

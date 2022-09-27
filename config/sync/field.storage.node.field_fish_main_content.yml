@@ -1,0 +1,19 @@
+uuid: 637b6138-7d01-4844-bce7-dcfabc91a99f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_fish_main_content
+field_name: field_fish_main_content
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

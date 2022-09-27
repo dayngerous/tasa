@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+langcode: en
+uuid: ade0478b-e384-4af5-8b44-ed2dfcb787cd
+name: Turneffe
+mail: benji.huggins@thecroc.com
+slogan: ''
+page:
+  403: ''
+  404: /node/95
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

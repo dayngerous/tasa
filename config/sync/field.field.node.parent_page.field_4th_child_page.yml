@@ -1,0 +1,28 @@
+uuid: 4fc04784-a4a0-46af-9744-a86fc41bf1e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4th_child_page
+    - node.type.page
+    - node.type.parent_page
+id: node.parent_page.field_4th_child_page
+field_name: field_4th_child_page
+entity_type: node
+bundle: parent_page
+label: '4th Child Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: c3c5fc44-23f5-4f04-9158-fb6d895748ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction_content
+    - node.type.gallery_page
+  module:
+    - text
+id: node.gallery_page.field_introduction_content
+field_name: field_introduction_content
+entity_type: node
+bundle: gallery_page
+label: 'Introduction Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,33 @@
+uuid: 6847a9a0-2504-4ebe-8fc8-f64193921a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1st_related_page
+    - node.type.article
+    - node.type.donate_page
+    - node.type.home_page
+    - node.type.page
+id: node.donate_page.field_1st_related_page
+field_name: field_1st_related_page
+entity_type: node
+bundle: donate_page
+label: '1st Related Page'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      page: page
+      donate_page: donate_page
+      home_page: home_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

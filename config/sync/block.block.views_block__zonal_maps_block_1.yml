@@ -1,0 +1,30 @@
+uuid: eccfd294-6528-4eb0-a0ca-ad6ba35bfd73
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.zonal_maps
+  module:
+    - system
+    - views
+  theme:
+    - turneffe
+id: views_block__zonal_maps_block_1
+theme: turneffe
+region: content
+weight: 2
+provider: null
+plugin: 'views_block:zonal_maps-block_1'
+settings:
+  id: 'views_block:zonal_maps-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /what-we-do/reserve-zoning

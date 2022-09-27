@@ -1,0 +1,37 @@
+uuid: e463a160-167d-4852-b4ec-f919ec380d69
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c2cb75a4-0d51-42a5-8002-7dfc4d216cd6'
+  module:
+    - block_content
+    - ctools
+  theme:
+    - turneffe
+id: donatecta
+theme: turneffe
+region: cta_content
+weight: -5
+provider: null
+plugin: 'block_content:c2cb75a4-0d51-42a5-8002-7dfc4d216cd6'
+settings:
+  id: 'block_content:c2cb75a4-0d51-42a5-8002-7dfc4d216cd6'
+  label: 'Donate CTA'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      contact_page: contact_page
+      fauna: fauna
+      home_page: home_page
+      map_page: map_page
+      page: page

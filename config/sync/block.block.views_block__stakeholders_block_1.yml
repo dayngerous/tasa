@@ -1,0 +1,30 @@
+uuid: e4d38ca9-0813-4664-8700-c28219d18854
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.stakeholders
+  module:
+    - system
+    - views
+  theme:
+    - turneffe
+id: views_block__stakeholders_block_1
+theme: turneffe
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:stakeholders-block_1'
+settings:
+  id: 'views_block:stakeholders-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '20'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /who-we-are/our-stakeholders

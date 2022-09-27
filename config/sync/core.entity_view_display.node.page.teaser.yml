@@ -1,0 +1,50 @@
+uuid: 7df8f717-2503-42bd-af13-557d4762212e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - field.field.node.page.field_1st_related_page
+    - field.field.node.page.field_2nd_related_page
+    - field.field.node.page.field_3rd_related_page
+    - field.field.node.page.field_alternative_banner_sub_tit
+    - field.field.node.page.field_alternative_banner_title
+    - field.field.node.page.field_banner_background
+    - field.field.node.page.field_contact_form
+    - field.field.node.page.field_intro_content
+    - field.field.node.page.field_introduction_content
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: rN2zrScZAJ9xB16hm_Deb9QJKy6JXnn0PdI2n5Z3KRs
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+hidden:
+  field_1st_related_page: true
+  field_2nd_related_page: true
+  field_3rd_related_page: true
+  field_alternative_banner_sub_tit: true
+  field_alternative_banner_title: true
+  field_banner_background: true
+  field_contact_form: true
+  field_intro_content: true
+  field_introduction_content: true

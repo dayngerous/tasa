@@ -1,0 +1,27 @@
+uuid: 4b8853d2-1751-4a2c-ac38-7ab1e0d25f49
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content
+label: Content
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  b6a3595f-65a6-4eaa-ad31-13b03f20f316:
+    id: node_type
+    negate: false
+    uuid: b6a3595f-65a6-4eaa-ad31-13b03f20f316
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      fauna: fauna
+      gallery_page: gallery_page
+      home_page: home_page
+      page: page
+      parent_page: parent_page
+selection_logic: and
+weight: -5
+relationships: {  }

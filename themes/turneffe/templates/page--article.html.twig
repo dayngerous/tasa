@@ -1,0 +1,70 @@
+{% set alt_title = node.field_alternative_banner_title.value %}
+{% set alt_subtitle = node.field_alternative_banner_sub_tit.value %}
+{% set bannerintro = node.field_introduction_content.value %}
+{% set bannerbg = file_url(node.field_banner_background.entity.uri.value) %}
+{% set intro = node.field_intro_content.value %}
+<header role="banner">
+  <div class="container">
+    <div class="container-frame wide">
+      {{ page.header }}
+    </div>
+  </div>
+</header>
+{% if bannerbg and bannerbg != base_path %}
+<div class="banner container cover-bg" style="background-image:url({{ bannerbg }})">
+{% else %}
+<div class="banner container cover-bg" style="background-image:url({{ base_path ~ directory }}/images/news-banner.jpg)">
+{% endif %}
+  <div class="container-frame">
+    <div class="banner-content">
+      <div class="banner-title">
+        <h1 class="mainbannertitle">News</h1>
+      </div>
+      <div class="banner-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      </div>
+    </div>
+  </div>
+</div>
+<a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+{% if intro is not empty %}
+<div class="container lgrey-bg">
+  <div class="container-frame page-intro">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ intro|raw }}
+  </div>
+</div>
+{% endif %}
+<div class="container page-content">
+  <main role="main">
+    <div class="container-frame narrow layout-content news-article">
+      <div class="article-teaser">
+        <h2{{ title_attributes }}>
+          {{ node.label }}
+        </h2>
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          {{ post.published_at|date("jS F, Y") }}
+        </div>
+        <div class="borderblock"></div>
+        {% set articleimg = file_url(node.field_image.entity.uri.value) %}
+        {% if articleimg and articleimg != base_path %}
+        <div class="ratioblock full">
+          <div class="article"></div>
+          <div class="ratiocontent cover-bg" style="background-image: url({{ articleimg }})"></div>
+        </div>
+        <div class="clear"></div>
+        {% endif %}
+      </div>
+      {{ node.body.value|raw }}
+    </div>{# /.layout-content #}
+  </main>
+</div>{# /.layout-container #}
+
+{{ page.cta_content }}
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %}
+

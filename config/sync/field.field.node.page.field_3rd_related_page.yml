@@ -1,0 +1,21 @@
+uuid: 28f5f1fb-57a3-4620-a96f-e324754e8c4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3rd_related_page
+    - node.type.page
+id: node.page.field_3rd_related_page
+field_name: field_3rd_related_page
+entity_type: node
+bundle: page
+label: '3rd Related Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

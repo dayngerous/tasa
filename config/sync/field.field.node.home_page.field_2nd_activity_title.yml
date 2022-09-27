@@ -1,0 +1,19 @@
+uuid: 98d4dab9-98de-4022-82ee-64a4a8887a41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2nd_activity_title
+    - node.type.home_page
+id: node.home_page.field_2nd_activity_title
+field_name: field_2nd_activity_title
+entity_type: node
+bundle: home_page
+label: '2nd Activity Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

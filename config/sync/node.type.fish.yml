@@ -1,0 +1,17 @@
+uuid: b6464f81-e91d-4391-9d10-461cc4999b7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Fish
+type: fish
+description: 'A type of fish that is displayed on the Fisheries Management page'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

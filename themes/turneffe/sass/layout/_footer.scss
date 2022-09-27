@@ -1,0 +1,127 @@
+.click-throughs {
+    font-size: 0;
+    text-align: center;
+    .click-through {
+        padding: 0 5%;
+        position: relative;
+        display: inline-block;
+        width: 33.33%;
+        height: 325px;
+        .overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border: 2px solid $transparent;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+        h2 {
+            padding: 0;
+            font-size: 1.412em;
+            text-transform: uppercase;
+            color: $white;
+        }
+        .click-text {
+            font-size: 0.941em;
+            max-width: 265px;
+            margin: 0 auto;
+            color: $white;
+        }
+    }
+    .click-through:hover {
+        .overlay {
+            top: 25px;
+            right: 25px;
+            left: 25px;
+            bottom: 25px;
+            border-color: $white;
+        }
+    }
+}
+.page-node-3 .click-throughs .click-through, .page-node-4 .click-throughs .click-through, .page-node-17 .click-throughs .click-through {
+    width: 50%;
+}
+.page-node-3 .who-hide, .page-node-4 .what-hide, .page-node-17 .why-hide {
+    display: none;
+}
+.donate-cta {
+    max-width: 970px;
+    padding: 10px 0;
+    margin: $center-margin;
+    p {
+        font-family: $rubik;
+        font-weight: 500;
+        color: $grey;
+        font-size: 1.412em;
+        line-height: 1.3;
+    }
+}
+
+.region-footer {
+    background-color: $secondary;
+    color: $white;
+    padding: 30px 0;
+    font-size: 0;
+    .footer-logo,
+    .footer-details,
+    .detail {
+        font-size: $base-font-size;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .footer-logo {
+        width: 150px;
+    }
+    .footer-details {
+        width: calc(100% - 150px);
+        .detail {
+            text-align: left;
+            padding-left: 10px;
+            font-size: 0.824em;
+            line-height: 1.2;
+            a {
+                color: $white;
+            }
+            a:hover {
+                color: $orange;
+            }
+            .detail-icon,
+            .detail-text {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .detail-icon {
+                padding-right: 10px;
+            }
+            .email,
+            .phone {
+                margin-bottom: 10px;
+                .detail-icon,
+                .detail-text {
+                    vertical-align: middle;
+                }
+            }
+        }
+        .detail:first-of-type {
+            font-family: $rubik;
+            text-transform: uppercase;
+            font-size: 0.941em;
+            font-weight: 700;
+            line-height: 1;
+            height: 69px;
+            border-right: 2px solid $white;
+            padding-right: 10px;
+        }
+        .detail.contact-detail {
+            padding-left: 5%;
+        }
+    }
+    div.block-system-branding-block {
+        max-width: 187px;
+        .scolled-logo {
+            display: none !important;
+        }
+    }
+}

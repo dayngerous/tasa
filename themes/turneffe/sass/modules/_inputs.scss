@@ -1,0 +1,165 @@
+// ----------------------------------------
+// // ------ Contact form ------
+// ----------------------------------------
+// /*  Styling for form elements */
+
+fieldset,
+form {
+  margin-bottom: 1.529411765em;
+}
+
+label,
+legend {
+  display      : block;
+  font-weight  : normal;
+  padding      : 0;
+  margin-bottom: 0.294117647em;
+}
+
+input,
+select,
+textarea {
+  display       : block;
+  width         : 100%;
+  font          : inherit;
+  line-height   : 1.470588235;
+  color         : #555555;
+  vertical-align: middle;
+  margin-bottom : 1.176470588em;
+  padding       : 0.294117647em;
+  border        : 0.071428571em solid #b8b8b8;
+}
+
+form .btn,
+form button {
+  margin-bottom: 1.176470588em;
+}
+
+textarea {
+  height: 12em;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  display      : inline-block;
+  width        : auto;
+  height       : auto;
+  padding      : 0;
+  margin-bottom: 0.294117647em;
+  cursor       : pointer;
+}
+
+input:focus,
+textarea:focus {
+  border-color      : $input-focus-border;
+  -webkit-box-shadow: inset 0 0.071428571em 0.071428571em rgba(0, 0, 0, 0.075), 0 0 0.470588235em $input-focus-shadow;
+  box-shadow        : inset 0 0.071428571em 0.071428571em rgba(0, 0, 0, 0.075), 0 0 0.470588235em $input-focus-shadow;
+  outline           : 0;
+  outline           : thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  outline       : thin dotted;
+  outline       : 0.294117647em auto -webkit-focus-ring-color;
+  outline-offset: -.117647059em;
+}
+/*  Inline Inputs */
+.input-inline {
+  display: inline;
+  width  : auto;
+}
+/*  Condensed Inputs */
+.input-condensed {
+  line-height: 1;
+  padding    : 0.117647059em;
+}
+
+#contact-message-feedback-form {
+  font-size : 0;
+  text-align: right;
+
+  #edit-langcode-wrapper {
+    display: none;
+  }
+
+  .form-wrapper {
+    text-align: left;
+    font-size : $base-font-size;
+    display   : inline-block;
+    width     : 50%;
+    padding   : 0 10px;
+
+    .form-actions,
+    .form-item {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: none;
+    }
+
+    input,
+    textarea {
+      border     : 1px solid $light-grey;
+      margin     : 0;
+      font-size  : 0.824em;
+      padding    : 15px 20px;
+      line-height: 1;
+    }
+
+    input[type="submit"] {
+      background-color  : $red;
+      color             : $white;
+      display           : inline-block;
+      font-weight       : 700;
+      letter-spacing    : 0.21em;
+      padding           : 1.4em 3.5em;
+      text-transform    : uppercase;
+      width             : auto;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      transition        : all 0.4s ease-in-out 0s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: $primary;
+    }
+
+    ::-webkit-input-placeholder {
+      font-weight   : 700;
+      color         : #999999;
+      letter-spacing: 0.21em;
+    }
+
+    ::-moz-placeholder {
+      font-weight   : 700;
+      color         : #999999;
+      letter-spacing: 0.21em;
+    }
+
+    :-ms-input-placeholder {
+      font-weight   : 700;
+      color         : #999999;
+      letter-spacing: 0.21em;
+    }
+
+    :-moz-placeholder {
+      font-weight   : 700;
+      color         : #999999;
+      letter-spacing: 0.21em;
+    }
+  }
+
+  .field--widget-string-textarea.form-wrapper,
+  .form-actions {
+    width: 100%;
+  }
+}
+@media screen and (min-width:0) and (min-resolution: .001dpcm) {
+  // IE9 CSS
+  #contact-message-feedback-form .form-wrapper label {
+    display: block;
+  }
+}

@@ -1,0 +1,215 @@
+// ----------------------------------------
+// // ------ grid ------
+// ----------------------------------------
+
+.container {
+  position: relative;
+  width   : auto;
+  height  : auto;
+
+  .container-frame,
+  .inlineframe {
+    position : relative;
+    width    : 95%;
+    max-width: 1080px;
+    margin   : 0 auto;
+
+    .contentblock,
+    .fluidbox {
+      position: relative;
+      float   : left;
+      height  : auto;
+    }
+
+    .inlineblock {
+      float         : none;
+      display       : inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .wide {
+    max-width: 1280px;
+  }
+
+  .narrow {
+    max-width: 855px;
+  }
+
+  .inlineframe {
+    font-size: 0;
+
+    .inlineblock {
+      font-size: $base-font-size;
+    }
+  }
+
+  .body-frame {
+    width: 100%;
+  }
+}
+
+.container:after {
+  clear  : both;
+  content: "";
+  display: block;
+}
+
+.eighth {
+  width: 12.5%;
+}
+
+.sixth {
+  width: 16.66666666666667%;
+}
+
+.fifth {
+  width: 20%;
+}
+
+.quarter {
+  width: 25%;
+}
+
+.thirty {
+  width: 30%;
+}
+
+.third {
+  width: 33.33333333333333%;
+}
+
+.half {
+  width: 50%;
+}
+
+.twothird {
+  width: 66.66666666666667%;
+}
+
+.seventy {
+  width: 70%;
+}
+
+.threequarter {
+  width: 75%;
+}
+
+.fivesixth {
+  width: 83.333333333333%;
+}
+
+.full {
+  width: 100%;
+}
+
+.v-middle {
+  vertical-align: middle !important;
+}
+
+.fill {
+  position: absolute;
+  top     : 0;
+  right   : 0;
+  bottom  : 0;
+  left    : 0;
+}
+// ----------------------------------------
+// // ------ tools ------
+// ----------------------------------------
+/* Vertical align content */
+.height-table {
+  display     : table;
+  table-layout: fixed;
+  width       : 100%;
+  height      : 100%;
+  overflow    : hidden;
+  position    : relative;
+  z-index     : 1;
+}
+
+.height-cell {
+  display       : table-cell;
+  vertical-align: middle !important;
+}
+/* Ratio blocks */
+.ratioblock {
+  position: relative;
+  float   : left;
+
+  .ratiocontent,
+  .spacedblock {
+    @extend .cover-bg;
+    bottom    : 0;
+    left      : 0;
+    position  : absolute;
+    right     : 0;
+    text-align: center;
+    top       : 0;
+  }
+
+  .galleryblock {
+    top   : 5px;
+    left  : 5px;
+    right : 5px;
+    bottom: 5px;
+  }
+
+  .landscape {
+    margin-top: 38.5%;
+  }
+
+  .article {
+    margin-top: 44.4%;
+  }
+
+  .video {
+    margin-top: 54.8%;
+  }
+
+  .one-half {
+    margin-top: 50%;
+  }
+
+  .one-one {
+    margin-top: 100%;
+  }
+
+  .one-two {
+    margin-top: 200%;
+  }
+}
+
+.circular {
+  border-radius: 50%;
+}
+/* border block */
+.borderblock {
+  display         : block;
+  width           : 44px;
+  height          : 5px;
+  background-color: $black;
+  margin          : 25px auto 30px;
+}
+// ----------------------------------------
+// // ------ backgrounds ------
+// ----------------------------------------
+
+.cover-bg,
+.fixed-bg {
+  -webkit-background-size: cover;
+  -moz-background-size   : cover;
+  -o-background-size     : cover;
+  background-size        : cover;
+  background-position    : center center;
+  background-repeat      : no-repeat;
+  color                  : #FFF;
+}
+
+.fixed-bg {
+  background-attachment: fixed;
+}
+
+.lgrey-bg {
+  background-color: $altlight-grey;
+}

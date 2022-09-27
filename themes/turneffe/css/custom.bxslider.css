@@ -1,0 +1,64 @@
+.dialog-off-canvas-main-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bx-wrapper {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: none;
+
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.bx-wrapper .bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+
+.window-slider .bx-wrapper .bx-viewport {
+  height: 100%;
+}
+
+.window-slider .bx-controls.bx-has-pager {
+  margin-top: -20px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  bottom: -40px;
+}
+
+.window-slider .bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  right: 0;
+  bottom: auto;
+  width: 10px;
+}
+
+/* PAGER */
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #10273d;
+}
+
+.window-slider .bx-wrapper .bx-pager.bx-default-pager a {
+  margin: 5px 0;
+  background: #FFF;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus,
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+  background: #116aaa;
+}

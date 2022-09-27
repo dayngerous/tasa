@@ -1,0 +1,345 @@
+<!-- BANNER -->
+{% set bannerbg = file_url(node.field_banner_background.entity.uri.value) %}
+{% set alt_title = node.field_alternative_banner_title.value %}
+{% set alt_subtitle = node.field_alternative_banner_sub_tit.value %}
+{% set bannerintro = node.field_introduction_content.value %}
+
+<!-- CONTENT -->
+<!-- mammals -->
+{% set mammal_content = node.field_mammals_content.value %}
+{% set mammal_image1 = file_url(node.field_mammals_image[0].entity.uri.value) %}
+{% set mammal_image2 = file_url(node.field_mammals_image[1].entity.uri.value) %}
+{% set marinemammal_content = node.field_marine_mammals_content.value %}
+{% set marinemammal_image1 = file_url(node.field_marine_mammals_image[0].entity.uri.value) %}
+{% set marinemammal_image2 = file_url(node.field_marine_mammals_image[1].entity.uri.value) %}
+<!-- reptiles -->
+{% set reptile_content = node.field_reptile_content.value %}
+{% set reptile_image1 = file_url(node.field_reptile_image[0].entity.uri.value) %}
+{% set reptile_image2 = file_url(node.field_reptile_image[1].entity.uri.value) %}
+{% set reptile_image3 = file_url(node.field_reptile_image[2].entity.uri.value) %}
+{% set reptile_image4 = file_url(node.field_reptile_image[3].entity.uri.value) %}
+{% set reptile_image5 = file_url(node.field_reptile_image[4].entity.uri.value) %}
+{% set reptile_image6 = file_url(node.field_reptile_image[5].entity.uri.value) %}
+<!-- fish -->
+{% set fish_content = node.field_fish_main_content.value %}
+{% set fish_second_content = node.field_fish_secondary_content.value %}
+{% set fish_image1 = file_url(node.field_fish_slider_image[0].entity.uri.value) %}
+{% set fish_image2 = file_url(node.field_fish_slider_image[1].entity.uri.value) %}
+{% set fish_image3 = file_url(node.field_fish_slider_image[2].entity.uri.value) %}
+{% set fish_image4 = file_url(node.field_fish_slider_image[3].entity.uri.value) %}
+{% set fish_image5 = file_url(node.field_fish_slider_image[4].entity.uri.value) %}
+{% set fish_image6 = file_url(node.field_fish_slider_image[5].entity.uri.value) %}
+<!-- birds -->
+{% set birds_content = node.field_birds_content.value %}
+{% set birds_image1 = file_url(node.field_birds_image[0].entity.uri.value) %}
+{% set birds_image2 = file_url(node.field_birds_image[1].entity.uri.value) %}
+{% set birds_image3 = file_url(node.field_birds_image[2].entity.uri.value) %}
+
+<header role="banner">
+  <div class="container">
+    <div class="container-frame wide">
+      {{ page.header }}
+    </div>
+  </div>
+</header>
+
+{% if bannerbg and bannerbg != base_path %}
+<div class="banner container cover-bg" style="background-image:url({{ bannerbg }})">
+{% else %}
+<div class="banner container cover-bg" style="background-image:url({{ base_path ~ directory }}/images/banner-default.jpg)">
+{% endif %}
+  <div class="container-frame">
+    <div class="banner-content">
+      <div class="banner-title">
+        {% if alt_subtitle|length %}
+        <h2 class="subbannertitle">{{ alt_subtitle|raw }}</h2>
+        {% endif %}
+        {% if alt_title|length %}
+        <h1 class="mainbannertitle">{{ alt_title|raw }}</h1>
+        {% else %}
+        <h1 class="mainbannertitle">{{ node.label }}</h1>
+        {% endif %}
+      </div>
+      {% if bannerintro|length %}
+      <div class="banner-text">
+        {{ bannerintro|raw }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div class="container page-content lgrey-bg">
+  <main role="main">
+    <div class="container-frame wide layout-content">
+      <div class="sliding-content">
+        <!-- content pager -->
+        <div id="bx-pager" class="content-nav">
+          <div class="inlineframe">
+            <div class="inlineblock quarter phab-half">
+              <a data-slide-index="0" href="">
+              <div class="ratioblock circularblock full">
+                <div class="one-one"></div>
+                <div class="ratiocontent circular cover-bg" style="background-image: url({{ mammal_image1 }})"></div>
+                <div class="ratiocontent circular hover-bg">
+                  <div class="height-table">
+                    <div class="height-cell">
+                      Mammals
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+             <div class="inlineblock quarter phab-half">
+              <a data-slide-index="1" href="">
+              <div class="ratioblock circularblock full">
+                <div class="one-one"></div>
+                <div class="ratiocontent circular cover-bg" style="background-image: url({{ reptile_image1 }})"></div>
+                <div class="ratiocontent circular hover-bg">
+                  <div class="height-table">
+                    <div class="height-cell">
+                      Reptiles
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+             <div class="inlineblock quarter phab-half">
+              <a data-slide-index="2" href="">
+              <div class="ratioblock circularblock full">
+                <div class="one-one"></div>
+                <div class="ratiocontent circular cover-bg" style="background-image: url({{ fish_image1 }})"></div>
+                <div class="ratiocontent circular hover-bg">
+                  <div class="height-table">
+                    <div class="height-cell">
+                      Fish
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+             <div class="inlineblock quarter phab-half">
+              <a data-slide-index="3" href="">
+              <div class="ratioblock circularblock full">
+                <div class="one-one"></div>
+                <div class="ratiocontent circular cover-bg" style="background-image: url({{ birds_image1 }})"></div>
+                <div class="ratiocontent circular hover-bg">
+                  <div class="height-table">
+                    <div class="height-cell">
+                      Birds
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- /content pager -->
+        <!-- content slides -->
+        <div class="content-slider">
+          <!-- mammals slide -->
+          <div class="content-slide">
+            <div class="slide-row">
+              <div class="view-image tab-full">
+                <div class="fluidbox ratioblock full">
+                  <div class="video"></div>
+                  <div class="ratiocontent cover-bg" style="background-image: url({{ mammal_image1 }})"></div>
+                </div>
+                <div class="clear"></div>
+                {% if mammal_image2 and mammal_image2 != base_path %}
+                <div class="second-image phab-hide">
+                  <div class="fluidbox ratioblock full">
+                    <div class="video"></div>
+                    <div class="ratiocontent cover-bg" style="background-image: url({{ mammal_image2 }})"></div>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+              <div class="view-text tab-full">
+                <div class="body-content">
+                  <h2>Mammals</h2>
+                  {{ mammal_content|raw }}
+                </div>
+              </div>
+            </div>
+            <div class="slide-row">
+              <div class="view-image tab-full">
+                <div class="fluidbox ratioblock full">
+                  <div class="video"></div>
+                  <div class="ratiocontent cover-bg" style="background-image: url({{ marinemammal_image1 }})"></div>
+                </div>
+                <div class="clear"></div>
+                {% if marinemammal_image2 and marinemammal_image2 != base_path %}
+                <div class="second-image tab-hide">
+                  <div class="fluidbox ratioblock full">
+                    <div class="video"></div>
+                    <div class="ratiocontent cover-bg" style="background-image: url({{ marinemammal_image2 }})"></div>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+              <div class="view-text tab-full">
+                <div class="body-content">
+                  <h2>Marine Mammals</h2>
+                  {{ marinemammal_content|raw }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /mammals slide -->
+          <!-- reptiles slide -->
+          <div class="content-slide">
+            <div class="slide-row">
+              <div class="view-image larger tab-full">
+                <div class="image-grid">
+                  {% if reptile_image1 and reptile_image1 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ reptile_image1 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if reptile_image2 and reptile_image2 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ reptile_image2 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if reptile_image3 and reptile_image3 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ reptile_image3 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if reptile_image4 and reptile_image4 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ reptile_image4 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if reptile_image5 and reptile_image5 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ reptile_image5 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if reptile_image6 and reptile_image6 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ reptile_image6 }})"></div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="view-text larger tab-full">
+                <div class="body-content">
+                  <h2>Reptiles</h2>
+                  {{ reptile_content|raw }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /reptiles slide -->
+          <!-- fish slide -->
+          <div class="content-slide">
+            <div class="slide-row">
+              <div class="view-image larger tab-full">
+                <div class="image-grid">
+                  {% if fish_image1 and fish_image1 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ fish_image1 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if fish_image2 and fish_image2 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ fish_image2 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if fish_image3 and fish_image3 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ fish_image3 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if fish_image4 and fish_image4 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ fish_image4 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if fish_image5 and fish_image5 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ fish_image5 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if fish_image6 and fish_image6 != base_path %}
+                  <div class="fluidbox ratioblock half">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ fish_image6 }})"></div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="view-text larger tab-full">
+                <div class="body-content">
+                  <h2>Fish</h2>
+                  {{ fish_content|raw }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /fish slide -->
+          <!-- bird slide -->
+          <div class="content-slide">
+            <div class="slide-row">
+              <div class="view-text bird-text full phab-full">
+                <div class="body-content">
+                  <h2>Birds</h2>
+                  {{ birds_content|raw }}
+                </div>
+              </div>
+              <div class="view-image full phab-full">
+                <div class="image-grid bird-images">
+                  {% if birds_image1 and birds_image1 != base_path %}
+                  <div class="fluidbox ratioblock third phab-full">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ birds_image1 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if birds_image2 and birds_image2 != base_path %}
+                  <div class="fluidbox ratioblock third phab-full">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ birds_image2 }})"></div>
+                  </div>
+                  {% endif %}
+                  {% if birds_image3 and birds_image3 != base_path %}
+                  <div class="fluidbox ratioblock third phab-full">
+                    <div class="video"></div>
+                    <div class="ratiocontent galleryblock cover-bg" style="background-image: url({{ birds_image3 }})"></div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /bird slide -->
+        </div>
+        <!-- /content slides -->
+      </div>
+      {{ page.content }}
+    </div>{# /.layout-content #}
+  </main>
+</div>{# /.layout-container #}
+
+{{ page.cta_content }}
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %}

@@ -1,0 +1,63 @@
+uuid: d1310519-7348-44d1-954c-44ec68485cf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.map_page.body
+    - field.field.node.map_page.field_1st_related_page
+    - field.field.node.map_page.field_2nd_related_page
+    - field.field.node.map_page.field_3rd_related_page
+    - field.field.node.map_page.field_alternative_banner_sub_tit
+    - field.field.node.map_page.field_alternative_banner_title
+    - field.field.node.map_page.field_banner_background
+    - field.field.node.map_page.field_introduction_content
+    - node.type.map_page
+  module:
+    - text
+    - user
+id: node.map_page.default
+targetEntityType: node
+bundle: map_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_1st_related_page:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_2nd_related_page:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_3rd_related_page:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_alternative_banner_sub_tit: true
+  field_alternative_banner_title: true
+  field_banner_background: true
+  field_introduction_content: true

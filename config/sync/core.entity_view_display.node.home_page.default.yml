@@ -1,0 +1,72 @@
+uuid: fe42883f-654d-430a-b17d-2ed079e97ed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_page.body
+    - field.field.node.home_page.field_1st_activity_icon
+    - field.field.node.home_page.field_1st_activity_text
+    - field.field.node.home_page.field_1st_activity_title
+    - field.field.node.home_page.field_1st_slide_content
+    - field.field.node.home_page.field_1st_slide_header
+    - field.field.node.home_page.field_1st_slide_image
+    - field.field.node.home_page.field_1st_slider_link
+    - field.field.node.home_page.field_2nd_activity_icon
+    - field.field.node.home_page.field_2nd_activity_text
+    - field.field.node.home_page.field_2nd_activity_title
+    - field.field.node.home_page.field_2nd_slide_content
+    - field.field.node.home_page.field_2nd_slide_header
+    - field.field.node.home_page.field_2nd_slide_image
+    - field.field.node.home_page.field_2nd_slide_link
+    - field.field.node.home_page.field_3rd_activity_icon
+    - field.field.node.home_page.field_3rd_activity_text
+    - field.field.node.home_page.field_3rd_activity_title
+    - field.field.node.home_page.field_3rd_slide_content
+    - field.field.node.home_page.field_3rd_slide_header
+    - field.field.node.home_page.field_3rd_slide_image
+    - field.field.node.home_page.field_3rd_slide_link
+    - field.field.node.home_page.field_introduction_content
+    - node.type.home_page
+  module:
+    - text
+    - user
+id: node.home_page.default
+targetEntityType: node
+bundle: home_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_1st_activity_icon: true
+  field_1st_activity_text: true
+  field_1st_activity_title: true
+  field_1st_slide_content: true
+  field_1st_slide_header: true
+  field_1st_slide_image: true
+  field_1st_slider_link: true
+  field_2nd_activity_icon: true
+  field_2nd_activity_text: true
+  field_2nd_activity_title: true
+  field_2nd_slide_content: true
+  field_2nd_slide_header: true
+  field_2nd_slide_image: true
+  field_2nd_slide_link: true
+  field_3rd_activity_icon: true
+  field_3rd_activity_text: true
+  field_3rd_activity_title: true
+  field_3rd_slide_content: true
+  field_3rd_slide_header: true
+  field_3rd_slide_image: true
+  field_3rd_slide_link: true
+  field_introduction_content: true

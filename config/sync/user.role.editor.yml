@@ -1,0 +1,124 @@
+uuid: 40720dfa-2b96-4f67-bca3-a45106a516b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.article
+    - node.type.contact_page
+    - node.type.ecosystems
+    - node.type.fauna
+    - node.type.fish
+    - node.type.gallery_page
+    - node.type.home_page
+    - node.type.map
+    - node.type.map_page
+    - node.type.page
+    - node.type.staff
+    - node.type.stakeholders
+    - node.type.timeline_event
+  module:
+    - contextual
+    - dropzonejs
+    - filter
+    - node
+    - quickedit
+    - search
+    - system
+    - toolbar
+id: editor
+label: Editor
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'create article content'
+  - 'create contact_page content'
+  - 'create ecosystems content'
+  - 'create fauna content'
+  - 'create fish content'
+  - 'create gallery_page content'
+  - 'create home_page content'
+  - 'create map content'
+  - 'create map_page content'
+  - 'create page content'
+  - 'create staff content'
+  - 'create stakeholders content'
+  - 'create timeline_event content'
+  - 'delete any article content'
+  - 'delete any ecosystems content'
+  - 'delete any fauna content'
+  - 'delete any fish content'
+  - 'delete any gallery_page content'
+  - 'delete any home_page content'
+  - 'delete any map content'
+  - 'delete any map_page content'
+  - 'delete any page content'
+  - 'delete any staff content'
+  - 'delete any stakeholders content'
+  - 'delete any timeline_event content'
+  - 'delete own article content'
+  - 'delete own contact_page content'
+  - 'delete own ecosystems content'
+  - 'delete own fauna content'
+  - 'delete own fish content'
+  - 'delete own gallery_page content'
+  - 'delete own home_page content'
+  - 'delete own map content'
+  - 'delete own map_page content'
+  - 'delete own page content'
+  - 'delete own staff content'
+  - 'delete own stakeholders content'
+  - 'delete own timeline_event content'
+  - 'dropzone upload files'
+  - 'edit any article content'
+  - 'edit any contact_page content'
+  - 'edit any ecosystems content'
+  - 'edit any fauna content'
+  - 'edit any fish content'
+  - 'edit any gallery_page content'
+  - 'edit any home_page content'
+  - 'edit any map content'
+  - 'edit any map_page content'
+  - 'edit any page content'
+  - 'edit any staff content'
+  - 'edit any stakeholders content'
+  - 'edit any timeline_event content'
+  - 'edit own article content'
+  - 'edit own contact_page content'
+  - 'edit own ecosystems content'
+  - 'edit own fauna content'
+  - 'edit own fish content'
+  - 'edit own gallery_page content'
+  - 'edit own home_page content'
+  - 'edit own map content'
+  - 'edit own map_page content'
+  - 'edit own page content'
+  - 'edit own staff content'
+  - 'edit own stakeholders content'
+  - 'edit own timeline_event content'
+  - 'use advanced search'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view contact_page revisions'
+  - 'view ecosystems revisions'
+  - 'view fauna revisions'
+  - 'view fish revisions'
+  - 'view gallery_page revisions'
+  - 'view home_page revisions'
+  - 'view map revisions'
+  - 'view map_page revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view staff revisions'
+  - 'view stakeholders revisions'
+  - 'view the administration theme'
+  - 'view timeline_event revisions'

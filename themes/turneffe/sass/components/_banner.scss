@@ -1,0 +1,33 @@
+.banner {
+    margin: 84px 0 0;
+    .container {
+        padding: 5% 0;
+    }
+    .banner-content {
+        padding-left: 15px;
+        border-left: 3px solid $white;
+        color: $white;
+        margin: 0 auto;
+        max-width: 1000px;
+        h1 {
+            font-size: 2.824em;
+            margin: 0;
+            padding: 0;
+            line-height: 0.8em;
+        }
+        h2 {
+            padding: 0;
+            margin: 10px 0 0;
+            font-size: 1.765em;
+        }
+        .banner-text {
+            font-family: $rubik;
+            font-weight: 400;
+            font-size: 1.294em;
+            padding-top: 2.5%;
+            p:last-of-type {
+                margin: 0 0 0
+            }
+        }
+    }
+}

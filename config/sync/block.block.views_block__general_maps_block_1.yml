@@ -1,0 +1,30 @@
+uuid: 58d68c85-21b7-4943-8668-94ee9c3beb9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general_maps
+  module:
+    - system
+    - views
+  theme:
+    - turneffe
+id: views_block__general_maps_block_1
+theme: turneffe
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:general_maps-block_1'
+settings:
+  id: 'views_block:general_maps-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /what-we-do/maps

@@ -1,0 +1,23 @@
+uuid: 13ea4feb-8672-4464-a534-9f4cfd1835ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ecosystems
+  module:
+    - text
+id: node.ecosystems.body
+field_name: body
+entity_type: node
+bundle: ecosystems
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

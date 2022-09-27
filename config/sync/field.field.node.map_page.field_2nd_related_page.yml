@@ -1,0 +1,33 @@
+uuid: b996840a-4a93-4038-8329-afc71c7c50f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2nd_related_page
+    - node.type.fauna
+    - node.type.home_page
+    - node.type.map_page
+    - node.type.page
+id: node.map_page.field_2nd_related_page
+field_name: field_2nd_related_page
+entity_type: node
+bundle: map_page
+label: '2nd Related Page'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      fauna: fauna
+      home_page: home_page
+      map_page: map_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference

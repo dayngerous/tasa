@@ -1,0 +1,21 @@
+uuid: ce8517b0-eb6f-4816-9d33-2bae11a3bf52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction_content
+    - node.type.parent_page
+  module:
+    - text
+id: node.parent_page.field_introduction_content
+field_name: field_introduction_content
+entity_type: node
+bundle: parent_page
+label: 'Introduction Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

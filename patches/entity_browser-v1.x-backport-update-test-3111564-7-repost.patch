@@ -1,0 +1,129 @@
+diff --git a/entity_browser.info.yml b/entity_browser.info.yml
+--- a/entity_browser.info.yml
++++ b/entity_browser.info.yml	(date 1646934380972)
+@@ -2,7 +2,7 @@
+ description: 'Provide a generic entity browser/picker/selector.'
+ type: module
+ package: Media
+-core_version_requirement: ^8.7.7 || ^9
++core_version_requirement: ^8.8 || ^9
+ test_dependencies:
+   - token:token
+   - inline_entity_form:inline_entity_form
+diff --git a/composer.json b/composer.json
+--- a/composer.json
++++ b/composer.json
+@@ -28,7 +28,7 @@
+   "license": "GPL-2.0+",
+   "minimum-stability": "dev",
+   "require": {
+-    "drupal/core": "^8.7.7 || ^9"
++    "drupal/core": "^8.8 || ^9"
+   },
+   "require-dev": {
+     "drupal/token": "~1.0",
+diff --git a/tests/src/Kernel/Extension/EntityBrowserTest.php b/tests/src/Kernel/Extension/EntityBrowserTest.php
+--- a/tests/src/Kernel/Extension/EntityBrowserTest.php
++++ b/tests/src/Kernel/Extension/EntityBrowserTest.php
+@@ -14,6 +14,7 @@
+ use Drupal\entity_browser\SelectionDisplayInterface;
+ use Drupal\KernelTests\KernelTestBase;
+ use Drupal\views\Entity\View;
++use Symfony\Component\Routing\RouteCollection;
+
+ /**
+  * Tests the entity_browser config entity.
+@@ -69,7 +70,7 @@
+     $this->widgetUUID = $this->container->get('uuid')->generate();
+     $this->routeProvider = $this->container->get('router.route_provider');
+
+-    $this->installSchema('system', ['router', 'key_value_expire', 'sequences']);
++    $this->installSchema('system', ['key_value_expire', 'sequences']);
+     View::create(['id' => 'test_view'])->save();
+   }
+
+@@ -193,7 +194,7 @@
+
+     // Ensure that rebuilding routes works.
+     $route = $this->routeProvider->getRoutesByPattern('/test-browser-test');
+-    $this->assertTrue($route, 'Route exists.');
++    $this->assertInstanceOf(RouteCollection::class, $route);
+   }
+
+   /**
+@@ -207,7 +208,7 @@
+
+     // Verify several properties of the entity browser.
+     $this->assertEquals($entity->label(), 'Testing entity browser instance');
+-    $this->assertTrue($entity->uuid());
++    $this->assertNotEmpty($entity->uuid());
+     $plugin = $entity->getDisplay();
+     $this->assertTrue($plugin instanceof DisplayInterface, 'Testing display plugin.');
+     $this->assertEquals($plugin->getPluginId(), 'standalone');
+diff --git a/tests/src/FunctionalJavascript/EntityReferenceWidgetTest.php b/tests/src/FunctionalJavascript/EntityReferenceWidgetTest.php
+--- a/tests/src/FunctionalJavascript/EntityReferenceWidgetTest.php
++++ b/tests/src/FunctionalJavascript/EntityReferenceWidgetTest.php
+@@ -102,7 +102,7 @@
+     $this->assertSession()->buttonExists('Save')->press();
+
+     $this->assertSession()->pageTextContains('Article Referencing node 1 has been created.');
+-    $nid = $this->container->get('entity.query')->get('node')->condition('title', 'Referencing node 1')->execute();
++    $nid = \Drupal::entityQuery('node')->condition('title', 'Referencing node 1')->execute();
+     $nid = reset($nid);
+
+     // Assert correct translation appears.
+diff --git a/tests/modules/entity_browser_test/config/install/views.view.test_deprecated_field.yml b/tests/modules/entity_browser_test/config/install/views.view.test_deprecated_field.yml
+--- a/tests/modules/entity_browser_test/config/install/views.view.test_deprecated_field.yml
++++ b/tests/modules/entity_browser_test/config/install/views.view.test_deprecated_field.yml
+@@ -12,7 +12,6 @@
+ tag: ''
+ base_table: node_field_data
+ base_field: nid
+-core: 8.x
+ display:
+   default:
+     display_plugin: default
+diff --git a/src/Plugin/views/display/EntityBrowser.php b/src/Plugin/views/display/EntityBrowser.php
+--- a/src/Plugin/views/display/EntityBrowser.php
++++ b/src/Plugin/views/display/EntityBrowser.php	(date 1646929808195)
+@@ -3,6 +3,7 @@
+ namespace Drupal\entity_browser\Plugin\views\display;
+
+ use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Security\TrustedCallbackInterface;
+ use Drupal\views\Plugin\views\display\DisplayPluginBase;
+
+ /**
+@@ -23,7 +24,7 @@
+  *   entity_browser_display = TRUE
+  * )
+  */
+-class EntityBrowser extends DisplayPluginBase {
++class EntityBrowser extends DisplayPluginBase implements TrustedCallbackInterface {
+
+   /**
+    * {@inheritdoc}
+@@ -221,4 +222,11 @@
+     return $content;
+   }
+
++  /**
++   * {@inheritdoc}
++   */
++  public static function trustedCallbacks() {
++    return ['postRender', 'elementPreRender'];
++  }
++
+ }
+diff --git a/tests/src/Functional/EntityBrowserUpdateHookTest.php b/tests/src/Functional/EntityBrowserUpdateHookTest.php
+--- a/tests/src/Functional/EntityBrowserUpdateHookTest.php
++++ b/tests/src/Functional/EntityBrowserUpdateHookTest.php
+@@ -21,7 +21,7 @@
+    */
+   protected function setDatabaseDumpFiles() {
+     $this->databaseDumpFiles = [
+-      DRUPAL_ROOT . '/core/modules/system/tests/fixtures/update/drupal-8.bare.standard.php.gz',
++      DRUPAL_ROOT . '/core/modules/system/tests/fixtures/update/drupal-8.8.0.bare.standard.php.gz',
+       __DIR__ . '/../../fixtures/update/entity_browser.update-hook-test.php',
+     ];
+   }

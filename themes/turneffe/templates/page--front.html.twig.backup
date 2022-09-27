@@ -1,0 +1,121 @@
+<header role="banner">
+  <div class="container">
+    <div class="container-frame wide">
+      {{ page.header }}
+    </div>
+  </div>
+</header>
+<div class="back-top">
+  <i class="fa fa-angle-down" aria-hidden="true"></i>
+</div>
+
+{% set slide_1 = file_url(node.field_1st_slide_image.entity.uri.value) %}
+{% set slide_2 = file_url(node.field_2nd_slide_image.entity.uri.value) %}
+{% set slide_3 = file_url(node.field_3rd_slide_image.entity.uri.value) %}
+<div class="window-slider">
+  <div class="home-slider">
+    {% if slide_1 and slide_1 != base_path %}
+    <div class="slide cover-bg" style="background-image: url({{ slide_1 }})">
+      <div class="height-table">
+        <div class="height-cell">
+          <div class="container-frame">
+            <h1>{{ node.field_1st_slide_header.value|raw }}</h1>
+            <div class="slide-text">
+              {{ node.field_1st_slide_content.value|raw }}
+            </div>
+            <a href="{{ node.field_1st_slider_link.value|raw }}"><button class="btn btn-slide">Learn More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if slide_2 and slide_2 != base_path %}
+    <div class="slide cover-bg" style="background-image: url({{ slide_2 }})">
+      <div class="height-table">
+        <div class="height-cell">
+          <div class="container-frame">
+            <h1>{{ node.field_2nd_slide_header.value|raw }}</h1>
+            <div class="slide-text">
+              {{ node.field_2nd_slide_content.value|raw }}
+            </div>
+            <a href="{{ node.field_2nd_slide_link.value|raw }}"><button class="btn btn-slide">Learn More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% if slide_3 and slide_3 != base_path %}
+    <div class="slide cover-bg" style="background-image: url({{ slide_3 }})">
+      <div class="height-table">
+        <div class="height-cell">
+          <div class="container-frame">
+            <h1>{{ node.field_3rd_slide_header.value|raw }}</h1>
+            <div class="slide-text">
+              {{ node.field_3rd_slide_content.value|raw }}
+            </div>
+            <a href="{{ node.field_3rd_slide_link.value|raw }}"><button class="btn btn-slide">Learn More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+<!-- <div class="container content-container">
+  <main role="main">
+
+    <div class="layout-content">
+
+    </div>{# /.layout-content #}
+  </main>
+</div>{# /.layout-container #} -->
+{% set intro = node.field_introduction_content.value %}
+{% if intro is not empty %}
+<div class="container lgrey-bg">
+  <div class="container-frame page-intro">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {{ intro|raw }}
+  </div>
+</div>
+{% endif %}
+<div class="container">
+  <div class="activities container-frame inlineframe">
+    <h2 class="container-head central-head">TASA Key Activities &amp; Programs</h2>
+    <div class="activity inlineblock third phab-full">
+      <div class="activity-icon">
+        <img src="{{ file_url(node.field_1st_activity_icon.entity.uri.value) }}" alt="">
+      </div>
+      <h3>{{ node.field_1st_activity_title.value|raw }}</h3>
+      <div class="activity-text">
+      {{ node.field_1st_activity_text.value|raw }}
+      </div>
+    </div>
+    <div class="activity inlineblock third phab-full">
+      <div class="activity-icon">
+        <img src="{{ file_url(node.field_2nd_activity_icon.entity.uri.value) }}" alt="">
+      </div>
+      <h3>{{ node.field_2nd_activity_title.value|raw }}</h3>
+      <div class="activity-text">
+      {{ node.field_2nd_activity_text.value|raw }}
+      </div>
+    </div>
+    <div class="activity inlineblock third phab-full">
+      <div class="activity-icon">
+        <img src="{{ file_url(node.field_3rd_activity_icon.entity.uri.value) }}" alt="">
+      </div>
+      <h3>{{ node.field_3rd_activity_title.value|raw }}</h3>
+      <div class="activity-text">
+      {{ node.field_3rd_activity_text.value|raw }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ page.cta_content }}
+
+{% if page.footer %}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+{% endif %}
+

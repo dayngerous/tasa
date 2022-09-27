@@ -1,0 +1,23 @@
+uuid: 88b9d1ed-5978-4763-81b1-508f516b22b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.timeline_event
+  module:
+    - text
+id: node.timeline_event.body
+field_name: body
+entity_type: node
+bundle: timeline_event
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

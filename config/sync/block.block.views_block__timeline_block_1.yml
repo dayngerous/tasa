@@ -1,0 +1,30 @@
+uuid: abd4ae81-90b8-408e-9f79-3d7f00e77bbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.timeline
+  module:
+    - system
+    - views
+  theme:
+    - turneffe
+id: views_block__timeline_block_1
+theme: turneffe
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:timeline-block_1'
+settings:
+  id: 'views_block:timeline-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /what-we-do/background

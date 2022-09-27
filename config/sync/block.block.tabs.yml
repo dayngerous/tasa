@@ -1,0 +1,31 @@
+uuid: d9fd8d83-760e-4643-9621-87c8f2d4d58e
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - turneffe
+id: tabs
+theme: turneffe
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      home_page: home_page
+      page: page

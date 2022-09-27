@@ -1,0 +1,21 @@
+uuid: fceb3dae-bdae-443d-843e-2a54e80e87e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2nd_slide_content
+    - node.type.home_page
+  module:
+    - text
+id: node.home_page.field_2nd_slide_content
+field_name: field_2nd_slide_content
+entity_type: node
+bundle: home_page
+label: '2nd Slide Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

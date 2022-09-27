@@ -1,0 +1,19 @@
+uuid: 82bb6c67-6409-45bb-8309-de54a054e28f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_banner_sub_tit
+    - node.type.parent_page
+id: node.parent_page.field_alternative_banner_sub_tit
+field_name: field_alternative_banner_sub_tit
+entity_type: node
+bundle: parent_page
+label: 'Alternative Banner Sub Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

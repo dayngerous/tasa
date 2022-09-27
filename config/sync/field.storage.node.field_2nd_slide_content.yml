@@ -1,0 +1,19 @@
+uuid: dd30fc25-0115-4de1-8c8e-bf1e7a1dbdfc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_2nd_slide_content
+field_name: field_2nd_slide_content
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

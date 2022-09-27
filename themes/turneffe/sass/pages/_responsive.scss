@@ -1,0 +1,192 @@
+@media only screen and (min-width: 1220px) {
+    .region-header .menu--main.navigation {
+        display: inline-block !important;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    header .menu--main.navigation {
+        display: none;
+        padding-left: 0;
+        text-align: left;
+        width: 100%;
+        ul {
+            margin-top: 15px;
+            text-align: left;
+            li.menu-item {
+                display: block;
+                margin-left: 0;
+                a {
+                    display: block;
+                    padding: 5px 0;
+                }
+                ul.menu {
+                    margin-top: 0;
+                    background-color: $white !important;
+                    position: static;
+                    display: block !important;
+                    border-left: none !important;
+                    border-right: none !important;
+                    border-bottom: none !important;
+                    li.menu-item a {
+                        color: $black !important;
+                    }
+                    li.menu-item a:hover,
+                    li.menu-item--active-trail a {
+                        background-color: $white !important;
+                        color: $orange !important;
+                    }
+                }
+            }
+        }
+    }
+    /* .region-header .menu--main.navigation ul.menu {
+        display: none;
+    } */
+    .hamburger {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1045px) {
+    .home-slider .slide .container,
+    .window-slider .slide .container {
+        padding-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .tab-show {
+        display: block
+    }
+    .tab-full {
+        width: 100% !important;
+    }
+    .tab-half {
+        width: 50% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .phab-hide {
+        display: none;
+    }
+    .phab-full {
+        width: 100% !important;
+    }
+    .phab-half {
+        width: 50% !important;
+    }
+    .home-slider .slide,
+    .window-slider .slide {
+        h1 {
+            font-size: 1.829em;
+            line-height: 1em;
+            span {
+                font-size: 19px;
+            }
+        }
+        .slide-text {
+            font-size: 0.841em;
+        }
+    }
+    .banner .container {
+        padding: 10% 0 !important;
+    }
+    .banner .banner-content {
+        h1 {
+            font-size: 1.829em !important;
+            line-height: 1;
+        }
+        h2 {
+            font-size: 1.265em !important;
+        }
+        .banner-text {
+            font-size: 1em !important;
+        }
+    }
+    .page-node-22 .container.content-container .node__content .field--name-body {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;
+    }
+    .field--type-entity-reference {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+        a {
+            margin-right: 0;
+        }
+    }
+    .field--type-entity-reference:last-of-type {
+        margin-bottom: 0;
+    }
+    .view-ecosystems {
+        .view-content .views-row article {
+            padding-bottom: 20px;
+        }
+        .view-content .views-row:not(:first-child) article {
+            padding-left: 0;
+        }
+        .views-row .view-text {
+            padding: 5% 0;
+        }
+    }
+    .views-row,
+    .slide-row {
+        .view-text.phab-full {
+            padding: 5% 0 0;
+        }
+    }
+    .content-nav {
+        margin-bottom: 20px;
+    }
+    .bird-images {
+        margin: 20px -5px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mob-hide {
+        display: none;
+    }
+    .mob-full {
+        width: 100% !important;
+    }
+    .mob-half {
+        width: 50% !important;
+    }
+    .grid-third .activity-text {
+        padding-bottom: 40px;
+    }
+    .grid-third:last-of-type .activity-text {
+        padding-bottom: 0
+    }
+    .donate-cta p {
+        font-size: 1.1em;
+    }
+    .slide-row .view-text,
+    .views-row .view-text {
+        padding: 5% 0 0;
+    }
+    .view-staff,
+    .content-slide {
+        .view-content .views-row article,
+        .slide-row {
+            padding-bottom: 20px;
+        }
+        .view-content .views-row:not(:first-child) article {
+            padding-left: 0;
+        }
+    }
+    .content-nav ul li a {
+        padding: 0 0 3px;
+        font-size: 1em;
+    }
+}

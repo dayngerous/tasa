@@ -1,0 +1,15 @@
+uuid: c2cd472d-e83e-4fe1-a234-9bc2f8d3eee4
+langcode: en
+status: true
+dependencies: {  }
+name: scaled_for_gallery
+label: 'Scaled for gallery (300 x 300)'
+effects:
+  f7bd37c9-2816-4493-8d9a-dddfa55fd843:
+    id: image_scale_and_crop
+    data:
+      width: 300
+      height: 300
+      anchor: center-center
+    weight: 1
+    uuid: f7bd37c9-2816-4493-8d9a-dddfa55fd843

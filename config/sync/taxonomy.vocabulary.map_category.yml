@@ -1,0 +1,8 @@
+uuid: ddaecce1-2f7f-4f0e-9a28-afaacab61042
+langcode: en
+status: true
+dependencies: {  }
+name: 'Map Category'
+vid: map_category
+description: ''
+weight: 0

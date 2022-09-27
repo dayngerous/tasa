@@ -1,0 +1,19 @@
+uuid: 81fc3774-49f8-4dbd-b895-e1be46169b66
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_4th_child_page
+field_name: field_4th_child_page
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
